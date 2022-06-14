@@ -1,0 +1,13 @@
+{
+    "devtools_port": 9090,
+    "startup_app": {
+        "name": "app-1655202170620-9708",
+        "url": "https://starter.openfin.solutions",
+        "uuid": "app-1655202170620-9708",
+        "saveWindowState": false,
+        "autoShow": true
+    },
+    "runtime": {
+        "version": "stable"
+    }
+}

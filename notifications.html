@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Starter Example with Notifications</title>
+  <link rel="icon"
+        type="image/x-icon"
+        href="./favicon.ico">
+  <meta name="description"
+        content="" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1" />
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com" />
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin="" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+  <link rel="stylesheet"
+        href="./style.css" />
+</head>
+
+<body class="col fill gap20">
+  <header class="row spread middle">
+    <div class="col">
+      <h1>Starter Example with Notifications</h1>
+      <h1 class="tag">Demonstrate a simple application with notifications.</h1>
+    </div>
+    <div class="row middle gap20">
+      <a href="https://www.openfin.co/"
+         target="_blank">
+        <img src="./icon-blue.png"
+             alt="OpenFin"
+             height="40px">
+      </a>
+    </div>
+  </header>
+  <main class="col fill gap20 left pad10">
+    <button id="btnShowNotification" style="display: none">Show Notification</button>
+    <div id="noRuntime" style="display: none">No OpenFin runtime available.</div>
+  </main>
+  <footer>
+    <div class="row spread">
+      <div class="row gap10">
+        <a href="https://github.com/built-on-openfin/container-starter"
+           target="_blank">Container Starters</a>
+        <a href="https://github.com/built-on-openfin/workspace-starter"
+           target="_blank">Workspace Starters</a>
+      </div>
+      <div class="row gap10">
+        <a href="https://www.openfin.co/"
+           target="_blank">OpenFin</a>
+        <a href="https://developers.openfin.co/"
+           target="_blank">Developer Docs</a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.openfin.co/services/openfin/notifications/1.14.0/openfin-notifications.js"></script>
+  <script>
+    (async () => {
+      if (window.fin) {
+        const btnShowNotification = document.querySelector("#btnShowNotification");
+        btnShowNotification.style.display = "block";
+        btnShowNotification.addEventListener("click", async () => {
+          await notifications.create({
+            title: "Simple Notification",
+            body: "This is a simple notification",
+            toast: "transient",
+            category: "default",
+            template: "markdown",
+            id: crypto.randomUUID()
+          });
+        });
+      } else {
+        const noRuntime = document.querySelector("#noRuntime");
+        noRuntime.style.display = "flex";
+      }
+    })();
+  </script>
+</body>
+
+</html>
