@@ -33,3 +33,9 @@ Run an example showing how notifications are displayed:
 The code for the notifications.
 
 <https://github.com/built-on-openfin/workspace-starter/blob/main/how-to/use-notifications/client/src/notifications.ts>
+
+## Interop
+
+Run an example showing how you can broadcast and listen for messages:
+
+<https://start.openfin.co/?manifest=https%3A%2F%2Fstarter.openfin.solutions%2Finterop.fin.json>

@@ -1,0 +1,53 @@
+{
+  "devtools_port": 9090,
+  "platform": {
+    "name": "app-1655207756921-5905",
+    "uuid": "app-1655207756921-5905",
+    "autoShow": false
+  },
+  "runtime": {
+    "version": "stable"
+  },
+  "snapshot": {
+    "windows": [
+      {
+        "layout": {
+          "content": [
+            {
+              "title": "OpenFin Broadcast",
+              "type": "component",
+              "componentName": "view",
+              "componentState": {
+                "url": "https://starter.openfin.solutions/broadcast.html",
+                "name": "broadcast-view",
+                "fdc3InteropApi": "1.2",
+                "interop": {
+                  "currentContextGroup": "green"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "layout": {
+          "content": [
+            {
+              "title": "OpenFin Listen",
+              "type": "component",
+              "componentName": "view",
+              "componentState": {
+                "url": "https://starter.openfin.solutions/listen.html",
+                "name": "listen-view",
+                "fdc3InteropApi": "1.2",
+                "interop": {
+                  "currentContextGroup": "green"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
